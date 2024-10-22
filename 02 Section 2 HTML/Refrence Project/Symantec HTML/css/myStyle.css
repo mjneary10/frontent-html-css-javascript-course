@@ -1,0 +1,116 @@
+/* General css that applys to all pages */
+body{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+ }
+
+ /* unvisited link */
+a{
+  background-color: aquamarine;
+  
+}
+a:link {
+  color: red;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(239, 18, 128);
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+/* Headings */
+h1,h2,h3{
+  font-weight: bold;
+  color: black;
+}
+h1{
+  font-size: 2em;
+}
+h2{
+  font-size: 1.5em;
+}
+/* Images */
+.img-responsive{
+  max-width: 100%;
+  height: auto;
+}
+.img-border-radius{
+  border-radius: 10px;
+}
+.img-opacity{
+  opacity: 0.3;
+}
+ul{
+  background-color: antiquewhite;
+  color: black;
+  padding: 30px;
+}
+/* Active class for the main nav current active page */
+.active{
+  background-color: white;
+}
+
+
+.intro{
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+}
+
+
+/* -------------------------------------------- */
+
+.margin-top-bottom{
+  margin: 90px 0;
+}
+.padding{
+  padding: 50px;
+}
+/* Buttons stuff */
+.btn{
+  display:inline-block;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid;
+}
+.btn-html{
+  background-color: red;
+}
+.btn-css{
+  background-color: yellow;
+}
+.btn-javascript{
+  background-color: orange;
+}
+/* Colors */
+.html-colors{
+  background-color:#ff6d00;
+  color: white;
+}
+.css-colors{
+  background-color: yellow;
+  color: black;
+}
+.javascript-colors{
+  background-color: orange;
+  color:white;
+}
+footer{
+  background-color: #ff6d00;
+  color: white;
+  text-align: center;
+  font-size: 3em;
+  
+}

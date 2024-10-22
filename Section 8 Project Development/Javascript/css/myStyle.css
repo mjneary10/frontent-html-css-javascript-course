@@ -1,0 +1,320 @@
+/* Variables and color settings */
+:root {
+	--color-one: #171717;
+	--color-two: rgb(176, 173, 173);
+	--color-three: #fafafa;
+	--color-four: #197c98;
+	--section-height: 90vh;
+  --section-width: 80vw;
+}
+
+/* General css oooooooooooooooooooooooo */
+html {
+	scroll-behavior: smooth;
+}
+
+#home,
+#web-services,
+#about,
+#web-templates,
+#feedback,
+#contact {
+	scroll-margin-top: 1.9em;
+}
+
+body {
+	color: var(--color-four);
+	background-color: var(--color-three);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 3.5em;
+	margin: 0;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address {
+	padding: 20px;
+	margin: 20px;
+}
+
+/* Colors qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq*/
+
+.color-one-bg {
+	background-color: var(--color-one);
+}
+
+.color-one {
+	color: var(--color-one);
+}
+
+.color-two-bg {
+	background-color: var(--color-two);
+}
+
+.color-two {
+	color: var(--color-two);
+}
+
+.color-three-bg {
+	background-color: var(--color-three);
+}
+
+.color-three {
+	color: var(--color-three);
+}
+
+.color-four-bg {
+	background-color: var(--color-four);
+}
+
+.color-four {
+	color: var(--color-four);
+}
+.gradient-1 {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(8deg, rgba(2, 0, 36, 1) 0%, rgba(175, 174, 172, 1) 50%, rgba(0, 212, 255, 1) 100%);
+}
+
+.gradient-2 {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(25, 124, 152, 1) 41%, rgba(0, 212, 255, 1) 100%);
+}
+
+
+/* Animation oooooooooooooooooooooooooooooooooooooo  */
+@keyframes scale-a-lil {
+	from {
+		scale: 0.5;
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.animate {
+		animation: scale-a-lil linear both;
+		animation-timeline: view();
+		animation-range: 20vh 50vh;
+	}
+}
+
+
+/* Re useable calsses iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+.section-height {
+	min-height: var(--section-height);
+}
+
+.img-responsive {
+	width: 100%;
+	height: auto;
+}
+
+.grid-main {
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, var(--section-width)) 1fr;
+}
+
+.grid-content {
+	grid-column: 2/3;
+}
+
+.grid-2-col {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+	gap: 20px;
+}
+
+.grid-3-col {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+	gap: 20px;
+}
+
+.flex-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-middle {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+button {
+	padding: 0.3em 2em 0.3em 2em;
+	margin: 20px;
+	font-size: 1.2em;
+	border: 0;
+}
+
+/* Main site stuff iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+/* Links on top */
+.top-links {
+	display: flex;
+	justify-content: flex-end;
+	border-bottom: 1px solid var(--color-one);
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.nav-bar ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.6em;
+}
+
+.nav-bar a {
+	display: block;
+	text-decoration: none;
+	padding: 1em;
+	font-weight: bold;
+	color: var(--color-three);
+}
+
+.nav-bar a:hover {
+	color: var(--color-two);
+}
+
+/* Main banner image section */
+.top-section {
+	position: relative;
+}
+
+.top-section::before {
+	content: "";
+	background-image: url("../img/banner.png");
+	opacity: 0.9;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: -1;
+}
+
+.top-banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+
+}
+
+.top-banner *:not(button) {
+	margin: 20px;
+	padding: 0;
+}
+
+/* About section */
+.about__right {
+	display: flex;
+	flex-direction: column;
+}
+
+.about p {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.about h3 {
+	padding-bottom: 0;
+	margin-bottom: o;
+}
+
+/* Install section */
+.text-on-image-div {
+	position: relative;
+	text-align: center;
+}
+
+.text-on-image-div::before {
+	content: "";
+	background-image: url("../img/install-left.png");
+	opacity: 0.5;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+/* Web templates section */
+.thumbnail {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 20px;
+}
+
+.thumbnail h3 {
+	margin: 0;
+}
+
+.os {
+	border-top: 1px solid var(--color-four);
+	border-bottom: 1px solid var(--color-four);
+}
+
+/* Other web dev servies section */
+.service-list-ul {
+	text-align: left;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	list-style-type: circle;
+}
+
+.service-list-ul li {
+	border-bottom: 1px solid var(--color-three);
+}
+
+/* Footer section */
+footer a {
+	color: var(--color-four);
+}
+
+@media screen and (max-width:600px) {
+  :root {
+   
+    
+    --section-width: 100vw;
+  }
+	body {
+    text-align: center;
+		font-size: 16px;
+	}
+}
+
