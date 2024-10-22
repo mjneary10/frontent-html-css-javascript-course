@@ -2,7 +2,11 @@
 
 This repository contains all the files required in this course. If you get stuck please see the refrence code for the section you are studying.
 
+---
+
 Please read all the following questions before starting the course.
+
+---
 
 **Q1: How can I download the files for this course?**
 
@@ -20,6 +24,6 @@ Please read all the following questions before starting the course.
 
 **A:** The reference project contains all the links you will need throughout this course.
 
-**Q5:Some course videos don't work, why?**
+**Q5: Some course videos don't work, why?**
 
 **A:** Udemy can sometimes experience issues with their videos, there is nothing I can do about this, please check back later.
