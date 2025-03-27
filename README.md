@@ -1,7 +1,7 @@
 # FAQ and Course Material for (Frontend Web Development with HTML CSS and JavaScript for beginners)
 
 This repository contains all the files required in this course. If you get stuck please see the reference code for the section you are studying.
-If you get stuck, just compare the downloaded code to your code for the section you are on.
+Just compare the downloaded code to your code for the section you are on.
 
 ---
 
@@ -13,9 +13,9 @@ Please read all the following questions before starting the course.
 
 **A:** To download all the code, just click the green button "Code", and then choose the “Download ZIP” option.
 
-**Q2: How do I view the final project?**
+**Q2: How do I view the final project and reference project?**
 
-**A:** Check out this link HERE
+**A:** The final project, reference project, and all code are in this repository.
 
 **Q3: I need help, where do I go?**
 
