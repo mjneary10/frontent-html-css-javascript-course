@@ -1,6 +1,6 @@
 # FAQ and Course Material for (Frontend Web Development with HTML CSS and JavaScript for beginners)
 
-This repository contains all the files required in this course. If you get stuck please see the refrence code for the section you are studying.
+This repository contains all the files required in this course. If you get stuck please see the reference code for the section you are studying.
 If you get stuck, just compare the downloaded code to your code for the section you are on.
 
 ---
@@ -26,10 +26,10 @@ Please read all the following questions before starting the course.
 **A:**
 You can get them HERE on codepen. Or, just see the (Resources) link on the section you are studying.
 
-**Q4: What is going to be my main source of reference?**
+**Q5: How do I get my course completion certificate?**
 
-**A:** The reference project contains all the links you will need throughout this course.
+**A:** Once you have completed 100% of the course, you will get it from Udemy. (see Your Progress)
 
-**Q5: Some course videos don't work, why?**
+**Q6: Some course videos don't work, why?**
 
 **A:** Udemy can sometimes experience issues with their videos, there is nothing I can do about this, please check back later.
