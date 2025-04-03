@@ -1,4 +1,4 @@
-# FAQ and Course Material for (Frontend Web Development with HTML CSS and JavaScript for beginners)
+# FAQ/Course Material for (Frontend HTML CSS JavaScript Course)
 
 This repository contains all the files required in this course. If you get stuck please see the reference code for the section you are studying.
 Just compare the downloaded code to your code for the section you are on.
