@@ -1,0 +1,14 @@
+<html>
+   <head>
+      <title>Basic webpage from scratch</title>
+   </head>
+   <body>
+      <h1>My basic webpage</h1>
+      <p>This is my basic web page, I created it from scratch without using vscode, there are three reasons I did this:</p>
+      <ul>
+         <li>I love coding</li>
+         <li>Just for fun</li>
+         <li>For practice</li>
+      </ul>
+   </body>
+</html>
