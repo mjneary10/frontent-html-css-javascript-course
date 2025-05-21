@@ -1,320 +1,377 @@
-/* Variables and color settings */
-:root {
-	--color-one: #171717;
-	--color-two: rgb(176, 173, 173);
-	--color-three: #fafafa;
-	--color-four: #197c98;
-	--section-height: 90vh;
-  --section-width: 80vw;
+/**************************************************************************/
+/* Variables to control the colors and sections size */
+/**************************************************************************/
+/* Use the colors and section width and height to change the look of site */
+ :root {
+    /* This color is also uased in the main gradient on the left */
+     --color-main: #09B3D8;
+     /* This color is also uased in the main gradient on the right */
+     --color-secondary: #F8F7FF;
+     --color-accent: #413C58;
+     --color-font:black;
+    /* Section height is set in percentage of the Viewport Height VH */
+     --section-height: 100vh;
+    /* This is used to set the width of the middle content column in grid-main*/
+     --section-width: 70em;
 }
-
-/* General css oooooooooooooooooooooooo */
-html {
-	scroll-behavior: smooth;
+/**************************************************************************/
+/* General css */
+/**************************************************************************/
+ html {
+     scroll-behavior: smooth;
 }
-
-#home,
-#web-services,
-#about,
-#web-templates,
-#feedback,
-#contact {
-	scroll-margin-top: 1.9em;
+ #home, #web-services, #about, #web-templates, #feedback, #contact {
+    /* Stop items blocking topnav on scrolling */
+     scroll-margin-top: 1.9em;
 }
-
-body {
-	color: var(--color-four);
-	background-color: var(--color-three);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-	margin: 0;
-	padding: 0;
+ body {
+     font-family: Arial, Helvetica, sans-serif;
+    /* Set the default font size, for using em later on */
+     font-size: 18px;
+     margin: 0;
+     padding: 0;
+     color:var(--color-font) 
 }
-
-h1 {
-	font-size: 3.5em;
-	margin: 0;
+ h1 {
+     font-size: 3em;
 }
-
-h2 {
-	font-size: 2em;
+ h2 {
+     font-size: 2em;
+     border-bottom: 1px solid var(--color-accent);
 }
-
-h3 {
-	font-size: 1.5em;
+ h3 {
+     font-size: 1.5em;
+     border-bottom: 1px solid var(--color-accent);
 }
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-address {
-	padding: 20px;
-	margin: 20px;
+ p, h1, h2, h3, h4, h5, h6, address {
+     padding: 0.5em;
+     margin: 0.5em;
 }
-
-/* Colors qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq*/
-
-.color-one-bg {
-	background-color: var(--color-one);
+/* Links colors */
+/* unvisited link */
+ a:link {
+     color: red;
 }
-
-.color-one {
-	color: var(--color-one);
+/* visited link */
+ a:visited {
+     color:var(--color-accent) 
 }
-
-.color-two-bg {
-	background-color: var(--color-two);
+/* mouse over link */
+ a:hover {
+     background-color: rgba(0, 0, 0, 0.142);
+     color: var(--color-accent) 
 }
-
-.color-two {
-	color: var(--color-two);
+/* selected link */
+ a:active {
+     color:var(--color-accent) 
 }
-
-.color-three-bg {
-	background-color: var(--color-three);
+/**************************************************************************/
+/* Colors settings */
+/**************************************************************************/
+ .color-main-bg {
+     background-color: var(--color-main);
+    /* bg colors used for background-color */
 }
-
-.color-three {
-	color: var(--color-three);
+ .color-main {
+     color: var(--color-main);
+    /* These colors used for contents (like text etc) */
 }
-
-.color-four-bg {
-	background-color: var(--color-four);
+ .color-secondary-bg {
+     background-color: var(--color-secondary);
 }
-
-.color-four {
-	color: var(--color-four);
+ .color-secondary {
+     color: var(--color-secondary);
 }
-.gradient-1 {
-	background: rgb(2, 0, 36);
-	background: linear-gradient(8deg, rgba(2, 0, 36, 1) 0%, rgba(175, 174, 172, 1) 50%, rgba(0, 212, 255, 1) 100%);
+ .color-accent-bg {
+     background-color: var(--color-accent);
 }
-
-.gradient-2 {
-	background: rgb(2, 0, 36);
-	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(25, 124, 152, 1) 41%, rgba(0, 212, 255, 1) 100%);
+ .color-accent {
+     color: var(--color-accent);
 }
-
-
-/* Animation oooooooooooooooooooooooooooooooooooooo  */
-@keyframes scale-a-lil {
-	from {
-		scale: 0.5;
-	}
+/* Gradients used for cool background to some elements */
+ .gradient-main{
+     background: var(--color-main);
+     background: linear-gradient(to right, var(--color-main), var(--color-secondary));
 }
-
-@media (prefers-reduced-motion: no-preference) {
-	.animate {
-		animation: scale-a-lil linear both;
-		animation-timeline: view();
-		animation-range: 20vh 50vh;
-	}
+/**************************************************************************/
+/* Animation */
+/**************************************************************************/
+ @keyframes scale-a-lil {
+     from {
+         scale: 0.5;
+        /* Set how small you want the element to start at */
+    }
 }
-
-
-/* Re useable calsses iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
-.section-height {
-	min-height: var(--section-height);
+ @media (prefers-reduced-motion: no-preference) {
+     .animate {
+         animation: scale-a-lil linear both;
+         animation-timeline: view();
+         animation-range: 20vh 50vh;
+    }
 }
-
-.img-responsive {
-	width: 100%;
-	height: auto;
+/**************************************************************************/
+/* Reusable classes */
+/**************************************************************************/
+ .section-height {
+    /* Set to min-height so that the content can then expand it if needed */
+     min-height: var(--section-height);
 }
-
-.grid-main {
-	display: grid;
-	grid-template-columns: 1fr minmax(auto, var(--section-width)) 1fr;
+ .img-responsive {
+     width: 100%;
+     height: auto;
 }
-
-.grid-content {
-	grid-column: 2/3;
+ .margin-top-bottom{
+     margin-top: 5em;
+     margin-bottom: 5em;
 }
-
-.grid-2-col {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-	gap: 20px;
+ .padding-small{
+     padding: 1em;
 }
-
-.grid-3-col {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-	gap: 20px;
+/* Create our main grid, 3 columns, with middle one used for content */
+/* And set the middle content column to the width specified in --section-width */
+ .grid-main {
+     display: grid;
+     grid-template-columns: 1fr minmax(auto, var(--section-width)) 1fr;
 }
-
-.flex-center {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+/* All our grid content is placed in the middle column at grid lines 2 - 3 */
+ .grid-content {
+     grid-column: 2/3;
 }
-
-.flex-middle {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+ .grid-2-col {
+    /* Used for internal content, not main grid */
+     display: grid;
+    /* Auto fill enabled, set minmax, min column size of 20em and max of 1 fraction */
+     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+     gap: 20px;
 }
-
-button {
-	padding: 0.3em 2em 0.3em 2em;
-	margin: 20px;
-	font-size: 1.2em;
-	border: 0;
+ .grid-3-col {
+    /* Used for internal content, not main grid */
+     display: grid;
+    /* Auto fill enabled, set minmax, min column size of 15em and max of 1 fraction */
+     grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+     gap: 3em;
 }
-
-/* Main site stuff iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii */
+ .flex-center {
+    /* Center items both vertical and horizontal */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+ .flex-v-middle {
+    /* Center items vertically only */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+ .btn {
+    /* Set the button structure only here */
+     padding: 0.3em 2em 0.3em 2em;
+     margin: 1em;
+     font-size: 1.2em;
+     border: 1px solid;
+     border-radius: 1em;
+     text-decoration: none;
+     text-align: center;
+}
+/* Set the reusable button styling here */
+ .btn-style{
+     background-color: var(--color-secondary);
+}
+ .btn-style:hover{
+     background-color:var(--color-main);
+     color: var(--color-secondary);
+}
+/* Used to reset lists of links etc. */
+ .list-reset{
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+}
+ .shadow{
+     box-shadow: 5px 10px 8px 10px #d0d0d0;
+}
+/**************************************************************************/
+/* CSS for each section of the site */
+/**************************************************************************/
+/**************************************************************************/
 /* Links on top */
-.top-links {
-	display: flex;
-	justify-content: flex-end;
-	border-bottom: 1px solid var(--color-one);
-	position: sticky;
-	top: 0;
-	z-index: 1;
+/**************************************************************************/
+ #topNavigation{
+     position:sticky;
+     top: 0;
+    /* Ensure top navigation is always seen over other layers on scrolling, set with z-index */
+     z-index: 3;
+     border-bottom: 1px solid var(--color-accent);
 }
-
-.nav-bar ul {
-	display: flex;
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	font-size: 0.6em;
+ ul.topnav {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+    /* Set to stop links overflowing on resize browser */
 }
-
-.nav-bar a {
-	display: block;
-	text-decoration: none;
-	padding: 1em;
-	font-weight: bold;
-	color: var(--color-three);
+ ul.topnav li {
+     float: left;
 }
-
-.nav-bar a:hover {
-	color: var(--color-two);
+ ul.topnav li a {
+     display: inline-block;
+    /* Make sure the links display in block format */
+     text-align: center;
+     padding: 12px 14px;
+     text-decoration: none;
+     transition: 0.2s;
+    /* Slow down the hover effect on the links */
 }
-
+ ul.topnav li.burger {
+     display: none;
+    /* Hide the mobile nav burger when on desktop */
+}
+/* This is the burger menu icon on mobile, 3 of these bars are used */
+ .burger-bar {
+     width: 30px;
+     height: 1px;
+     background-color: var(--color-accent);
+    /* Set margin top bottom 3px left right 0px */
+     margin: 3px 0;
+}
+/* Top navigation specific media query for mobile */
+/* Hide li's but not home li and position burger to right */
+ @media screen and (max-width:600px) {
+     ul.topnav li:not(:first-child) {
+         display: none;
+    }
+     ul.topnav li.burger {
+         float: right;
+         display: inline-block;
+    }
+}
+/* Set what the navToggle class will do */
+ @media screen and (max-width:600px) {
+     ul.topnav.navToggle li.burger {
+        /* Make sure burger does not drop with menu on open */
+         position: absolute;
+         right: 0;
+         top: 0;
+    }
+     ul.topnav.navToggle li {
+        /* Make sure li's open down (inline) */
+         float: none;
+         display: inline;
+    }
+     ul.topnav.navToggle li a {
+        /* Make sure links display block */
+         display: block;
+         text-align: left;
+        /* Align mobile dropdown link text left, as all other text is centered */
+    }
+}
+/**************************************************************************/
 /* Main banner image section */
-.top-section {
-	position: relative;
+/**************************************************************************/
+ #home {
+     position: relative;
+     text-align: center;
 }
-
-.top-section::before {
-	content: "";
-	background-image: url("../img/banner.png");
-	opacity: 0.9;
-	background-size: cover;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
-	z-index: -1;
+ .centerTextOverlay{
+    /* Show the text over the image, not underneath it */
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     width: 100%;
+     transform: translate(-50%, -50%);
+    /* Don't let the text div go up behind the navigation */
+     margin-top: 1.9em;
+     text-align: center;
 }
-
-.top-banner {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-
-
+ .centerTextOverlay h1{
+    /* Remove the padding on main H1 to make it look better fitting */
+     padding: .2em;
+     background-color: rgba(128, 128, 128, 0.447);
+     color: var(--color-secondary);
+     border: 1px dotted;
+     border-radius: .2em;
 }
-
-.top-banner *:not(button) {
-	margin: 20px;
-	padding: 0;
+ .centerTextOverlay p{
+    /* Remove the padding on main H1 to make it look better fitting */
+     padding: .2em;
+     background-color: rgba(128, 128, 128, 0.447);
+     color: var(--color-secondary);
+     border: 1px dotted;
+     border-radius: .2em;
 }
-
+/**************************************************************************/
 /* About section */
-.about__right {
-	display: flex;
-	flex-direction: column;
+/**************************************************************************/
+ #about p {
+    /* Bring the paragraph and h3 closer together for appearance */
+     padding-top: 0;
+     margin-top: 0;
 }
-
-.about p {
-	padding-top: 0;
-	margin-top: 0;
-}
-
-.about h3 {
-	padding-bottom: 0;
-	margin-bottom: o;
-}
-
+/**************************************************************************/
 /* Install section */
-.text-on-image-div {
-	position: relative;
-	text-align: center;
+/**************************************************************************/
+ .install{
+     position: relative;
+    /* Set to relative so that centerText will work here also */
 }
-
-.text-on-image-div::before {
-	content: "";
-	background-image: url("../img/install-left.png");
-	opacity: 0.5;
-	background-size: cover;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	left: 0px;
+/**************************************************************************/
+/* Other web dev services section */
+/**************************************************************************/
+ .service-list-ul {
+     text-align: left;
+     font-size: 1.2em;
+     line-height: 1.5em;
 }
-
-.centered {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-
+/**************************************************************************/
 /* Web templates section */
-.thumbnail {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	margin: 20px;
+/**************************************************************************/
+ .thumbnail {
+     display: flex;
+     flex-direction: column;
+    /* Puts space between the items in this element */
+     justify-content: space-between;
+     border: 1px solid;
+     border-radius: 1em;
+     background-color: var(--color-secondary);
+     color: var(--color-main);
 }
-
-.thumbnail h3 {
-	margin: 0;
+/* Put roundy corners on the top of the images only */
+ .thumbnail img{
+     border-radius: 1em 1em 0 0;
 }
-
-.os {
-	border-top: 1px solid var(--color-four);
-	border-bottom: 1px solid var(--color-four);
-}
-
-/* Other web dev servies section */
-.service-list-ul {
-	text-align: left;
-	font-size: 1.5em;
-	line-height: 1.5em;
-	list-style-type: circle;
-}
-
-.service-list-ul li {
-	border-bottom: 1px solid var(--color-three);
-}
-
+/**************************************************************************/
 /* Footer section */
-footer a {
-	color: var(--color-four);
+/**************************************************************************/
+ footer ul li{
+     margin: 1em;
+    /* Used to help page performance on Google page speed insights */
 }
-
-@media screen and (max-width:600px) {
-  :root {
-   
-    
-    --section-width: 100vw;
-  }
-	body {
-    text-align: center;
-		font-size: 16px;
-	}
+/**************************************************************************/
+/* Main mobile media query */
+/**************************************************************************/
+ @media screen and (max-width:600px) {
+     :root {
+         --section-width: 100vw;
+        /* Make all content full width on mobile */
+    }
+     body {
+        /* Center all text on mobile */
+         text-align: center;
+        /* Reduce the default font size on mobile */
+         font-size: 16px;
+    }
+     .grid-2-col{
+         gap: 2em;
+    }
+    /* Reduce the padding and margins on mobile only */
+     p, h1, h2, h3, h4, h5, h6, address {
+         padding: 0.1em;
+         margin: 0.1em;
+    }
+    /* Set margin on about section only to look better */
+     #about p, h3{
+         margin: 0.8em 0;
+    }
 }
-
+ 

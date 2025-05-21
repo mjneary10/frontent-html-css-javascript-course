@@ -1,0 +1,163 @@
+/**************************************************************************/
+/* Variables to control the colors and sections size */
+/* Use the colors and section width and height to change the look of site */
+/**************************************************************************/
+/* This is used to set the width of the middle content column in grid-main*/
+:root {
+  /* This is used to set the width of the middle content column in grid-main*/
+  --section-width: 70em;
+  /* Section height is set in percentage of the Viewport Height VH */
+  --section-height: 100vh;
+}
+/**************************************************************************/
+/* General css */
+/**************************************************************************/
+#about {
+  /* Stop items blocking topnav on scrolling */
+  scroll-margin-top: 1.9em;
+}
+h2 {
+  font-size: 2em;
+  border-bottom: 1px solid var(--color-accent);
+}
+h3 {
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--color-accent);
+}
+p,
+h2,
+h3 {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+/**************************************************************************/
+/* Colors settings */
+/**************************************************************************/
+.color-main {
+  color: var(--color-main);
+  /* These colors used for contents (like text etc) */
+}
+.color-accent {
+  color: var(--color-accent);
+}
+/**************************************************************************/
+/* Reusable classes */
+/**************************************************************************/
+/* Create our main grid, 3 columns, with middle one used for content */
+/* And set the middle content column to the width specified in --section-width */
+.grid-main {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, var(--section-width)) 1fr;
+}
+/* All our grid content is placed in the middle column at grid lines 2 - 3 */
+.grid-content {
+  grid-column: 2/3;
+}
+.grid-2-col {
+  /* Used for internal content, not main grid */
+  display: grid;
+  /* Auto fill enabled, set minmax, min column size of 20em and max of 1 fraction */
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 20px;
+}
+.section-height {
+  /* Set to min-height so that the content can then expand it if needed */
+  min-height: var(--section-height);
+}
+.margin-top-bottom {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+.flex-v-middle {
+  /* Center items vertically only */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shadow {
+  box-shadow: 5px 10px 8px 10px #d0d0d0;
+}
+/* Animation */
+@keyframes scale-a-lil {
+  from {
+    scale: 0.5;
+    /* Set how small you want the element to start at */
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .animate {
+    animation: scale-a-lil linear both;
+    animation-timeline: view();
+    animation-range: 20vh 50vh;
+  }
+}
+/**************************************************************************/
+/* <!-- Header --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Banner --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- About --> */
+/**************************************************************************/
+#about p {
+  /* Bring the paragraph and h3 closer together for appearance */
+  padding-top: 0;
+  margin-top: 0;
+}
+/**************************************************************************/
+/* <!-- Install --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Web dev services --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Web templates --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Customer feedback --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Contact us --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Footer --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* Main mobile media query */
+/**************************************************************************/
+@media screen and (max-width: 600px) {
+  :root {
+    --section-width: 100vw;
+    /* Make all content full width on mobile */
+  }
+  body {
+    /* Center all text on mobile */
+    text-align: center;
+    /* Reduce the default font size on mobile */
+    font-size: 16px;
+  }
+  .grid-2-col {
+    gap: 2em;
+  }
+  /* Reduce the padding and margins on mobile only */
+  p,
+  h2,
+  h3 {
+    padding: 0.1em;
+    margin: 0.1em;
+  }
+  /* Set margin on about section only to look better */
+  #about p,
+  h3 {
+    margin: 0.8em 0;
+  }
+}

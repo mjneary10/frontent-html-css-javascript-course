@@ -1,0 +1,158 @@
+/**************************************************************************/
+/* Variables to control the colors and sections size */
+/* Use the colors and section width and height to change the look of site */
+/**************************************************************************/
+:root {
+  /* This color is also used in the main gradient on the left */
+  --color-main: #09b3d8;
+  /* This color is also used in the main gradient on the right */
+  --color-secondary: #f8f7ff;
+  --color-accent: #413c58;
+  --color-font: black;
+}
+/**************************************************************************/
+/* General css */
+/**************************************************************************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* Set the default font size, for using em later on */
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  color: var(--color-font);
+}
+/* Links colors */
+/* unvisited link */
+a:link {
+  color: red;
+}
+/* visited link */
+a:visited {
+  color: var(--color-accent);
+}
+/* mouse over link */
+a:hover {
+  background-color: rgba(0, 0, 0, 0.142);
+  color: var(--color-accent);
+}
+/* selected link */
+a:active {
+  color: var(--color-accent);
+}
+/**************************************************************************/
+/* Colors settings */
+/**************************************************************************/
+.color-secondary-bg {
+  background-color: var(--color-secondary);
+}
+/**************************************************************************/
+/* Reusable classes */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Header --> */
+/**************************************************************************/
+#topNavigation {
+  position: sticky;
+  top: 0;
+  /* Ensure top navigation is always seen over other layers on scrolling, set with z-index */
+  z-index: 3;
+  border-bottom: 1px solid var(--color-accent);
+}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Set to stop links overflowing on resize browser */
+}
+ul.topnav li {
+  float: left;
+}
+ul.topnav li a {
+  display: inline-block;
+  /* Make sure the links display in block format */
+  text-align: center;
+  padding: 12px 14px;
+  text-decoration: none;
+  transition: 0.2s;
+  /* Slow down the hover effect on the links */
+}
+ul.topnav li.burger {
+  display: none;
+  /* Hide the mobile nav burger when on desktop */
+}
+/* This is the burger menu icon on mobile, 3 of these bars are used */
+.burger-bar {
+  width: 30px;
+  height: 1px;
+  background-color: var(--color-accent);
+  /* Set margin top bottom 3px left right 0px */
+  margin: 3px 0;
+}
+/* Top navigation specific media query for mobile */
+/* Hide li's but not home li and position burger to right */
+@media screen and (max-width: 600px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.burger {
+    float: right;
+    display: inline-block;
+  }
+}
+/* Set what the navToggle class will do */
+@media screen and (max-width: 600px) {
+  ul.topnav.navToggle li.burger {
+    /* Make sure burger does not drop with menu on open */
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.navToggle li {
+    /* Make sure li's open down (inline) */
+    float: none;
+    display: inline;
+  }
+  ul.topnav.navToggle li a {
+    /* Make sure links display block */
+    display: block;
+    text-align: left;
+    /* Align mobile dropdown link text left, as all other text is centered */
+  }
+}
+/**************************************************************************/
+/* <!-- Banner --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- About --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Install --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Web dev services --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Web templates --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Customer feedback --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Contact us --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* <!-- Footer --> */
+/**************************************************************************/
+
+/**************************************************************************/
+/* Main mobile media query */
+/**************************************************************************/
