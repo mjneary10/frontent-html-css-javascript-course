@@ -1,150 +1,158 @@
-/* ------------------------------------ */
-/* General css that applys to all pages */
-/* ------------------------------------ */
-/*
-html {
-  scroll-behavior:smooth
-}
-@keyframes scale-a-lil {
-  from {
-    scale: 0.8;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  section {
-    animation: scale-a-lil linear both;
-    animation-timeline: view();
-    animation-range: 25vh 75vh;
-  }
-}
-
-.box{
-  background-color: #529ce6;
- 
-  margin: 100px;
-  border-radius: 10px;
-  transition: transform 1s;
-}
-
-.box:hover{
-  transform: scale(1.2);
-}
-  */
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: tahoma, verdana, sans-serif;
+  font-style: normal;
+  color: rgb(95, 86, 86);
   font-size: 16px;
-  color: black;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
-/* ------------------------------------ */
-/* Colors ----------------------------- */
-/* ------------------------------------ */
+
+h1,
+h2,
+p,
+a {
+  margin: 0.2em;
+}
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1em;
+}
+/* Links styling ---------------------------------------------------------- */
+/* Unvisited link */
+a:link {
+  color: red;
+  text-decoration: none;
+}
+
+/* Visited link */
+a:visited {
+  color: green;
+}
+
+/* Mouse over link */
+a:hover {
+  background-color: rgba(128, 128, 128, 0.336);
+  color: purple;
+  text-decoration: underline;
+}
+
+/* Selected link */
+a:active {
+  color: blue;
+}
+
+/* Colors ----------------------------------------------------------------*/
 .html-colors {
   background-color: #fad7bd;
 }
+
 .css-colors {
   background-color: rgb(205, 205, 243);
 }
 .javascript-colors {
   background-color: rgb(236, 236, 123);
 }
-/* ------------------------------------ */
-/* headings --------------------------- */
-/* ------------------------------------ */
-h1,
-h2,
-h3 {
-  font-weight: bold;
-}
-h1 {
-  font-size: 2em;
-}
-h2 {
-  font-size: 1.5em;
-}
-/* ------------------------------------ */
-/* links ------------------------------ */
-/* ------------------------------------ */
-/* unvisited link */
-a:link {
-  color: red;
-  text-decoration: none;
+
+.list-color-bg {
+  background-color: white;
 }
 
-/* visited link */
-a:visited {
-  color: green;
+/* Reusable classes ------------------------------------------------------*/
+.padding-large {
+  padding: 3em;
+}
+.margin-large-t-b {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.margin-small-t-b {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-/* mouse over link */
-a:hover {
-  color: rgb(239, 18, 128);
-  text-decoration: underline;
-}
-
-/* selected link */
-a:active {
-  color: blue;
-}
-/* ------------------------------------ */
-/* reuseable classes ------------------ */
-/* ------------------------------------ */
-/* images */
 .img-responsive {
   max-width: 100%;
   height: auto;
 }
-.img-opacity {
-  opacity: 0.5;
+.img-style {
+  border-radius: 0.5em;
+  opacity: 1;
 }
-/* borders */
-.border-radius {
-  border-radius: 10px;
+
+/* Navbar css -------------------------------------------------------------*/
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* Set to stop links overflowing on resize browser */
+  overflow: hidden;
+  background-color: rgb(243, 219, 219);
 }
-/* margins and padding */
-.margin-top-bottom {
-  margin: 90px 0;
+ul.topnav li {
+  float: left;
 }
-.padding {
-  padding: 50px;
-}
-/* lists */
-ul {
-  background-color: white;
-  padding: 30px;
-}
-/* Buttons */
-.btn {
+ul.topnav li a {
+  /* Make sure the links display in block format */
   display: inline-block;
-  padding: 5px 10px;
   text-align: center;
-  border: 1px solid;
-}
-.btn-nav {
-  background-color: rgb(198, 198, 240);
-}
-.btn-nav:hover {
-  background-color: white;
+  padding: 12px 14px;
   text-decoration: none;
+  /* Slow down the hover effect on the links */
+  transition: 0.2s;
 }
-/* active button */
-.active {
-  background-color: white;
+ul.topnav li.burger {
+  display: none;
+  /* Hide the mobile nav burger when on desktop */
 }
-/* ------------------------------------ */
-/* intro on top of page --------------- */
-/* ------------------------------------ */
-.intro {
-  text-transform: uppercase;
-  font-style: italic;
-  text-align: center;
+
+.burger-bar {
+  /* This is the burger menu icon on mobile, 3 of these bars are used */
+  width: 30px;
+  height: 1px;
+  background-color: black;
+  /* Set margin top bottom 3px left right 0px */
+  margin: 3px 0;
 }
-/* ------------------------------------ */
-/* footer */
-/* ------------------------------------ */
-footer {
-  background-color: #529ce6;
-  color: white;
-  text-align: center;
-  font-size: 3em;
+/* Top navigation specific media query for mobile */
+/* Hide li's but not home li and position burger to right */
+@media screen and (max-width: 600px) {
+  ul.topnav li:not(:first-child) {
+    display: none;
+  }
+  ul.topnav li.burger {
+    float: right;
+    display: inline-block;
+  }
+}
+/* Set what the navToggle class will do */
+@media screen and (max-width: 600px) {
+  ul.topnav.navToggle li.burger {
+    /* Make sure burger does not drop with menu on open */
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.navToggle li {
+    /* Make sure li's open down (inline) */
+    float: none;
+    display: inline;
+  }
+  ul.topnav.navToggle li a {
+    /* Make sure links display block */
+    display: block;
+    text-align: left;
+    /* Align mobile dropdown link text left, as all other text is centered */
+  }
 }

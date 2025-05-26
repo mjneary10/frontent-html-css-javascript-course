@@ -1,54 +1,216 @@
-<!-- This must be declared in all html documents. -->
 <!DOCTYPE html>
-<!-- This must be declared in all html documents, the only visable item will be the document title -->
-<head>
-   <title>Web Development Reference Website</title>
-   <link rel="stylesheet" href="css/myStyle.css">
-</head>
-<!-- This is where al lthe content visable on in the browser will be places. -->
-<body>
-   <header>
-      <img src="img/Banner.jpg" class="img-responsive border-radius"/>
-      <nav id="myNav">
-         <a href="index.html" class="btn btn-nav">Home</a>
-         <a href="index.html#html" class="btn btn-nav">HTML Reference</a>
-         <a href="index.html#css" class="btn btn-nav">CSS Reference</a>
-         <a href="index.html#javascript" class="btn btn-nav">Javascript Reference</a>
-         <a href="examples.html" class="btn btn-nav active">Examples</a>
-      </nav>
-   </header>
-   <main>
-     
-      <!-- CSS Box model example html -->
-      <section class="box-model-example">
-         <h2>CSS box model example</h2>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/myStyle.css">
+      <link rel="stylesheet" href="css/examplesCSS.css">
+      <script src="js/myJs.js"></script>
+      <title>Web Development Reference Project</title>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <ul class="topnav" id="myTopnav">
+               <!-- The function closeMenu() will close the mobile dropdown when a link is clicked -->
+               <li><a href="/#home" onclick="closeMenu()">Home</a></li>
+               <li><a href="/#html" onclick="closeMenu()">HTML</a></li>
+               <li><a href="/#css" onclick="closeMenu()">CSS</a></li>
+               <li><a href="/#javascript" onclick="closeMenu()">Javascript</a></li>
+               <li><a href="examples.html" onclick="closeMenu()">Examples</a></li>
+               <!-- This link is the mobile menu dropdown icon -->
+               <li class="burger">
+                  <a href="javascript:void(0);" title="navbar for mobile" onclick="navFunction()">
+                     <div class="burger-bar"></div>
+                     <div class="burger-bar"></div>
+                     <div class="burger-bar"></div>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <img src="img/banner.jpg" class="img-responsive img-style" alt="this is the main banner image" width="1900" height="150" />
+      </header>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- Positioning Example -------------------------------------------------->
+      <!-- ------------------------------------------------------------------- -->
+      <!-- See the examplesCSS.css file -->
+      <hr>
+      <h2>CSS Positioning Example</h2>
+      <hr>
+      <div class="positioning-container">
+         <div class="positioning-div position-sticky">
+         </div>
+      </div>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- CSS Float Example -------------------------------------------------->
+      <!-- ------------------------------------------------------------------- -->
+      <!-- See the examplesCSS.css file -->
+      <hr>
+      <h2>CSS Float Example</h2>
+      <hr>
+      <p>
+      <div class="float-object">
+         <p>Float object</p>
+      </div>
+      This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.This is a paragraph of text to demonstrate the float property.</p>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- CSS Flexbox Example -------------------------------------------------->
+      <!-- ------------------------------------------------------------------- -->
+      <!-- See the examplesCSS.css file -->
+      <hr>
+      <h2>CSS Flexbox Example</h2>
+      <hr>
+      <div class="flex-example-container flex-column-example">
+         <div class="flex-example-item">Item 1</div>
+         <div class="flex-example-item flex-align-self">Item 2</div>
+         <div class="flex-example-item">Item 3</div>
+      </div>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- CSS Grid Example -------------------------------------------------->
+      <!-- ------------------------------------------------------------------- -->
+      <!-- See the examplesCSS.css file -->
+      <hr>
+      <h2>CSS Grid Example</h2>
+      <hr>
+      <section class="grid-example-main">
+         <aside class="grid-example-content">
+            <h2>Header</h2>
+         </aside>
       </section>
-      <!-- CSS Box model example css -->
+      <section class="grid-example-main">
+         <aside class="grid-example-content">
+            <h2>Main Content</h2>
+            <p>This is where all our main content will be placed</p>
+         </aside>
+      </section>
+      <footer class="grid-example-main">
+         <aside class="grid-example-content">
+            <h2>Footer</h2>
+         </aside>
+      </footer>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- CSS Root Variables Example ------------------------------------------->
+      <!-- ------------------------------------------------------------------- -->
+      <!-- See the examplesCSS.css file -->
+      <hr>
+      <h2>CSS Root Variables Example</h2>
+      <hr>
+      <section class="grid-example-main ">
+         <aside class="grid-example-content color-main">
+            <h2>Header</h2>
+         </aside>
+      </section>
+      <section class="grid-example-main">
+         <aside class="grid-example-content color-secondary height-section">
+            <h2>Main Content</h2>
+            <p>This is where all our main content will be placed</p>
+         </aside>
+      </section>
+      <section class="grid-example-main">
+         <aside class="grid-example-content color-main">
+            <h2>Footer</h2>
+         </aside>
+      </section>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- CSS Media Queries Responsive Design Example ------------------------------>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- See the examplesCSS.css file -->
+      <hr>
+      <h2>CSS Media Queries Responsive Design Example</h2>
+      <hr>
+      <div class="media-query-example">
+      </div>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- CSS Mobile navigation example ------------------------------>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- See the examplesCSS.css file -->
+      <hr>
+      <h2>CSS Mobile Navigation Example</h2>
+      <hr>
+      <p>Just see the main site navigation in the html files and in the CSS file myStyle.css </p>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- Javascript variables example            ------------------------------>
+      <!-- ------------------------------------------------------------------- -->
+      <hr>
+      <h2>Javascript variables example </h2>
+      <hr>
+      <p id="myJsTest"></p>
+      <script>
+         a = 3;
+         b = 5;
+         c = a + b;
+         var x = document.getElementById("myJsTest");
+         x.innerHTML = "a plus b equals: " + c;
+      </script>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- Javascript getElementById() example            ------------------------------>
+      <!-- ------------------------------------------------------------------- -->
+      <hr>
+      <h2>Javascript getElementById() example </h2>
+      <hr>
       <style>
-         .box-model-example{
-         background-color: antiquewhite;
-         padding: 100px;
-         border: 10px solid black;
-         margin: 50px;
+         .color-one{
+         background-color:skyblue;
+         }
+         .color-two{
+         background-color:rgb(19, 73, 95);
          }
       </style>
-      <!-- CSS Box model example javascript -->
-       <script>
+      <p id="js-color-change">This is some text.</p>
+      <script>
+         var x = document.getElementById("js-color-change");
+         x.className = "color-one";
+      </script>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- Javascript if then else example          ----------------------------->
+      <!-- ------------------------------------------------------------------- -->
+      <hr>
+      <h2>Javascript if then else example </h2>
+      <hr>
+      <p id="ifThenElse"></p>
+      <script>
+         a = 6;
+         b = 5;
+         
+         if (a > b){
+            document.getElementById("ifThenElse").innerHTML = "a IS greater than b";
+         }else{
+            document.getElementById("ifThenElse").innerHTML = "a is NOT greater than b";
+         }
+      </script>
+      <!-- ------------------------------------------------------------------- -->
+      <!-- Javascript functions example          ----------------------------->
+      <!-- ------------------------------------------------------------------- -->
+      <hr>
+      <h2>Javascript functions example </h2>
+      <hr>
+      <style>
+         .orange{
+         background-color:orange ;
+         }
+         .green{
+         background-color: green;
+         }
+      </style>
+      <p class="orange" onclick="changeColor()" id="colorChagne">Click me to change color</p>
+      <script>
+         function changeColor() {
+         var x = document.getElementById("colorChagne");
+         if (x.className === "orange") {
+         x.className = "green";
+         } else {
+         x.className = "orange";
+         }
+         }
+      </script>
 
-       </script>
-       <!-- ********************************* -->
-      <h2>Positioning</h2>
-      <h2>Layouts</h2>
-      <h2>FLoats</h2>
-      <h2>Flexbox</h2>
-      <h2>Grid</h2>
-      <h2>Root variables</h2>
-      <h2>Media queries</h2>
-      <h2>Mobile nav example</h2>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-   </main>
-   <footer class="padding border-radius">
-      <p>This website was developed by <strong>me</strong></p>
-   </footer>
-</body>
+       <!-- ------------------------------------------------------------------- -->
+      <!-- Javascript mobile menu example          ----------------------------->
+      <!-- ------------------------------------------------------------------- -->
+        <hr>
+      <h2>Javascript mobile navigation example </h2>
+      <hr>
+       <p>Just see this sites html and myJs.js for the javascript</p>
+      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+   </body>
 </html>
